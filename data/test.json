@@ -1,0 +1,134 @@
+{
+  "20140586": {
+    "BA1710": {
+      "sub": "INDUSTRIAL ENGINEERING AND MANAGEMENT ",
+      "int": "47.5",
+      "ext": "50",
+      "tot": "98",
+      "grade": "S",
+      "credit": 3.0
+    },
+    "CS1641": {
+      "sub": "SOCIAL NETWORK ANALYSIS (ELECTIVE VII) ",
+      "int": "39",
+      "ext": "43",
+      "tot": "82",
+      "grade": "A",
+      "credit": 3.0
+    },
+    "CS1703": {
+      "sub": "COMPILER DESIGN ",
+      "int": "38.25",
+      "ext": "41",
+      "tot": "80",
+      "grade": "A",
+      "credit": 4.0
+    },
+    "CS1756": {
+      "sub": "R PROGRAMMING (ELECTIVE VIII) ",
+      "int": "45",
+      "ext": "49",
+      "tot": "94",
+      "grade": "S",
+      "credit": 3.0
+    },
+    "CS1762": {
+      "sub": "COMPILER DESIGN LAB ",
+      "int": "47.58",
+      "ext": "30",
+      "tot": "78",
+      "grade": "A",
+      "credit": 1.5
+    },
+    "CS1763": {
+      "sub": "INTELLIGENT SYSTEMS LAB ",
+      "int": "52",
+      "ext": "37",
+      "tot": "89",
+      "grade": "S",
+      "credit": 1.5
+    },
+    "CS1781": {
+      "sub": "\"INDUSTRIAL TRAINING II\" / \"INDUSTRIAL TRAINING/COURSE WORK\" ",
+      "int": "-",
+      "ext": "64",
+      "tot": "64",
+      "grade": "C",
+      "credit": 1.0
+    },
+    "EC1723": {
+      "sub": "MEMS AND NEMS DEVICES (OPEN ELECTIVE) ",
+      "int": "48.1",
+      "ext": "49",
+      "tot": "98",
+      "grade": "S",
+      "credit": 3.0
+    }
+  },
+  "201500087": {
+    "BA1710": {
+      "sub": "INDUSTRIAL ENGINEERING AND MANAGEMENT ",
+      "int": "12.5",
+      "ext": "15",
+      "tot": "28",
+      "grade": "F",
+      "credit": 3.0
+    },
+    "CS1703": {
+      "sub": "COMPILER DESIGN ",
+      "int": "16",
+      "ext": "19",
+      "tot": "35",
+      "grade": "E",
+      "credit": 4.0
+    },
+    "CS1759": {
+      "sub": "ARTIFICIAL INTELLIGENCE (ELECTIVE VIII) ",
+      "int": "18",
+      "ext": "17",
+      "tot": "35",
+      "grade": "E",
+      "credit": 3.0
+    },
+    "CS1760": {
+      "sub": "BLOCK CHAIN CODING (ELECTIVE VII) ",
+      "int": "19",
+      "ext": "17",
+      "tot": "36",
+      "grade": "E",
+      "credit": 3.0
+    },
+    "CS1762": {
+      "sub": "COMPILER DESIGN LAB ",
+      "int": "0",
+      "ext": "5",
+      "tot": "5",
+      "grade": "F",
+      "credit": 1.5
+    },
+    "CS1763": {
+      "sub": "INTELLIGENT SYSTEMS LAB ",
+      "int": "40",
+      "ext": "32",
+      "tot": "72",
+      "grade": "B",
+      "credit": 1.5
+    },
+    "CS1781": {
+      "sub": "\"INDUSTRIAL TRAINING II\" / \"INDUSTRIAL TRAINING/COURSE WORK\" ",
+      "int": "-",
+      "ext": "80",
+      "tot": "80",
+      "grade": "A",
+      "credit": 1.0
+    },
+    "EC1722": {
+      "sub": "AUTOMATION AND ROBOTICS (OPEN ELECTIVE) ",
+      "int": "23.1",
+      "ext": "20",
+      "tot": "44",
+      "grade": "E",
+      "credit": 3.0
+    }
+  }
+}

@@ -1,0 +1,95 @@
+
+
+.grade{
+	font-size: 50px;
+	font-weight: bold;
+	color: #3F6AE6;
+}
+
+.grade-container{
+	z-index: -1;
+	display: none;
+}
+
+.first-container{
+	padding-top: 225px;
+}
+
+.second-container{
+	padding-top: 15px;
+}
+
+.student-info-container{
+
+	z-index: -1;
+	display: none;
+
+}
+
+.card-body td{
+	border: 0;
+}
+
+.subject-title{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.student-info-table{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.student-info-table td{
+	padding: 0;
+}
+
+.subject-code{
+	font-size: 12px;
+}
+
+.subject-grade{
+	font-size: 25px;
+	color: #3F6AE6;
+	font-weight: bold;
+}
+
+.card{
+	height: auto;
+}
+
+.grade-container{
+	margin-bottom: 15px;
+}
+
+.gpa-row{
+	font-size: 20px;
+	background-color: aquamarine;
+	color:coral;
+	font-weight: bold;
+	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.card table{
+	margin-bottom: 0;
+}
+
+.card table:first-child tr:first-child td:first-child{
+	border-top-left-radius: 5px;
+}
+
+.card table:first-child tr:first-child td:last-child{
+	border-top-right-radius: 5px;
+}
+
+.card table:last-child tr:last-child td:first-child{
+	border-bottom-left-radius: 5px;
+}
+
+.card table:last-child tr:last-child td:last-child{
+	border-bottom-right-radius: 5px;
+}
+

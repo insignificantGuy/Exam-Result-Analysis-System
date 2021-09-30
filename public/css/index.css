@@ -1,0 +1,81 @@
+body{
+  background-color: #B0E0E6;
+  margin: 0;
+  text-align: center;
+
+}
+h1{
+margin: 30px;
+font-family: 'Montserrat', sans-serif;
+text-shadow: 5px 0 #232931;
+font-size: 4rem;
+color: white;
+}
+
+h2{
+  margin: 0 30px 30px 30px ;
+  font-size: 3rem;;
+  text-shadow: 2px 0 #232931;
+  color: #F08080;
+}
+p{
+  margin:10px;
+  font-size: 20px;
+  font-family: 'Arvo', cursive;
+
+}
+.container-xl {
+background-color: #4682B4;
+
+  text-align: center;
+  padding: 30px;
+
+}
+
+.box{
+margin: 50px;
+padding: 30px;
+text-align: center;
+background-color:  #40E0D0;
+display: inline-block;
+}
+
+.line{
+  font-size: 2rem;
+
+}
+.button {
+  outline: none;
+  border: 1px solid #404B69;
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  float: left;
+  box-shadow: 0 0 1px #ccc;
+}
+
+
+.a{
+  background-image: url("../icons/ResultGenerator.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+}
+.a:hover{
+    -webkit-transform: scale(1.1);
+    background-image: url("../icons/ResultGenerator.png");
+    cursor: pointer;
+}
+
+.b{
+  background-image: url("../icons/ResultAnalysis.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+
+}
+.b:hover{
+  -webkit-transform: scale(1.1);
+  background-image: url("../icons/ResultAnalysis.png");
+  cursor: pointer;
+}

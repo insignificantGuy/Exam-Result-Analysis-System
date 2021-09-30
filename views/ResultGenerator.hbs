@@ -1,0 +1,63 @@
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="css/ResultGenerator.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container-xl">
+		<h1><b>SMIT EXAM RESULT</b></h1>
+
+	</div>
+	<div class="header">
+		<h2>Result Generator</h2>
+		<form action="/generateResult" method="POST" class="header-message-container">
+			<div class="header-message">
+				<select id="exam-id" class="form-control form-control-sm">
+					<option value="non" selected="selected">Select examination</option>
+					<!-- 	<option value="33">November/December 2017 Semester Examination</option>
+        							<option value="35">April/May 2018 Semester Examination</option>
+        							<option value="41">November/December 2018 Semester Examination</option>
+        							<option value="45">April/May 2019 Semester Examination</option> -->
+					<option value="23">Nov/Dec 2020 Semester Examination</option>
+				</select>
+			</div>
+			<div class="header-message">
+				<input name="regNo" id="registration-number" class="form-control form-control-sm"
+					placeholder="Enter registration number" />
+			</div>
+			<div class="header-message">
+				<button type="submit" id="calculate-button" class="btn btn-sm btn-success">
+					SUBMIT
+				</button>
+			</div>
+		</form>
+	</div>
+
+	<div
+      class="container"
+      id="result"
+    >
+      <div class="row">
+       {{{resultCard}}}
+      </div>
+	    </div>
+	  <div class="gpa-row" id="show-gpa">
+                GPA : {{gpa}}
+        </div>
+  
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ResultGenerator.js"></script>
+
+</body>
+
+</html>
