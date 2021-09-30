@@ -5,16 +5,33 @@ const data = require('./data/23.json')
 const bodyParser = require('body-parser');
 const fs = require("fs");
 var pdf2table = require('pdf2table');
-// // const { json } = require('body-parser');
+// const { json } = require('body-parser');
 // const PDFParser = require("pdf2json");
 // const pdf = require("pdf-parse");
-// const pdf2excel = require('pdf-to-excel');
+//const pdf2excel = require('pdf-to-excel');
 
 
 app.set('view engine', 'hbs')
 app.use(bodyParser.urlencoded({
     extended: false
 }))
+
+const pdf2excel = require('pdf-to-excel');
+
+try {
+  const options = {
+    // when current pdf page number changes call this function(optional)
+    onProcess: (e) => console.warn(`${e.numPage} / ${e.numPages}`),
+    // pdf start page number you want to convert (optional, default 1)
+    start: 96,
+    // pdf end page number you want to convert (optional, default )
+    end: 101,
+  }
+
+  pdf2excel.genXlsx('./data/exam.pdf', 'bar.xlsx', options);
+} catch (err) {
+  console.log(err);
+}
 
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')))
@@ -110,8 +127,7 @@ app.get("/getJsonData",async (req,res)=>{
         if (err) return console.log(err);
         pdf2table.parse(buffer, function (err, rows, rowsdebug) {
             if(err) return console.log(err);
-            const data = rows;
-            return res.json(data);
+            return res.status(200).json(rows);
         });
     });
 })
