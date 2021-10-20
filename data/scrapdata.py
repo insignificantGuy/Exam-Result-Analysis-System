@@ -25,6 +25,7 @@ def main():
                 subcode = href[href.index('=')+1:]
                 nextUrl.append(
                     "https://result.smuexam.in/grade.php?subid="+subcode)
+                
 
     for urliter in nextUrl:
         count = 1
