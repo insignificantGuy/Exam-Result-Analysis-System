@@ -4,34 +4,28 @@ const path = require('path')
 const data = require('./data/23.json')
 const bodyParser = require('body-parser');
 const fs = require("fs");
-var pdf2table = require('pdf2table');
-// const { json } = require('body-parser');
-// const PDFParser = require("pdf2json");
-// const pdf = require("pdf-parse");
-//const pdf2excel = require('pdf-to-excel');
-
 
 app.set('view engine', 'hbs')
 app.use(bodyParser.urlencoded({
     extended: false
 }))
 
-const pdf2excel = require('pdf-to-excel');
+// const pdf2excel = require('pdf-to-excel');
 
-try {
-  const options = {
-    // when current pdf page number changes call this function(optional)
-    onProcess: (e) => console.warn(`${e.numPage} / ${e.numPages}`),
-    // pdf start page number you want to convert (optional, default 1)
-    start: 96,
-    // pdf end page number you want to convert (optional, default )
-    end: 101,
-  }
+// try {
+//   const options = {
+//     // when current pdf page number changes call this function(optional)
+//     onProcess: (e) => console.warn(`${e.numPage} / ${e.numPages}`),
+//     // pdf start page number you want to convert (optional, default 1)
+//     start: 96,
+//     // pdf end page number you want to convert (optional, default )
+//     end: 101,
+//   }
 
-  pdf2excel.genXlsx('./data/exam.pdf', 'bar.xlsx', options);
-} catch (err) {
-  console.log(err);
-}
+//   pdf2excel.genXlsx('./data/exam.pdf', 'bar.xlsx', options);
+// } catch (err) {
+//   console.log(err);
+// }
 
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')))
@@ -120,16 +114,37 @@ app.post('/generateResult', (req, res) => {
         res.render('ResultGenerator', {
             resultCard: "Not found"
         })
-})
+});
 
-app.get("/getJsonData",async (req,res)=>{
-    fs.readFile('./data/exam.pdf', function (err, buffer) {
-        if (err) return console.log(err);
-        pdf2table.parse(buffer, function (err, rows, rowsdebug) {
-            if(err) return console.log(err);
-            return res.status(200).json(rows);
-        });
-    });
+app.post("/analyzeResult",(req,res)=>{
+    var yourData = data[req.body.yourRegNo];
+    var friends = data[req.body.friendsRegNo];
+    var subs = Object.keys(yourData);
+    var yourSub = [];
+    var friendsSub = [];
+    for(var i=0;i<subs.length;i++){
+        yourSub.push(yourData[subs[i]]);
+        friendsSub.push(friends[subs[i]]);
+    }
+    var yourResult = [];
+    var friendsResult = [];
+    for(var i=0;i<yourSub.length;i++){
+        var your = yourSub[i];
+        var friends = friendsSub[i];
+        if(your!=null){
+            yourResult.push(yourSub[i].tot);
+        }
+        else{
+            yourResult.push(0);
+        }
+        if(friends!=null){
+            friendsResult.push(friendsSub[i].tot);
+        }
+        else{
+            friendsResult.push(0);
+        }
+    }
+    return res.status(200).json({yourResult,friendsResult});
 })
 
 app.listen(3000, console.log("Server running on 3000"))
