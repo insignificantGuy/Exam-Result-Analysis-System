@@ -7,6 +7,7 @@
   	<link href="css/font-awesome.min.css" rel="stylesheet" />
   	<link href="css/style.css" rel="stylesheet" />
     <link href="css/ResultAnalysis.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   </head>
   <body>
     <div class="container-xl">
@@ -20,10 +21,6 @@
       					<div class="header-message">
       						<select id="exam-id" class="form-control form-control-sm">
       							<option value="non" selected="selected">Select examination</option>
-      						<!--<option value="33">November/December 2017 Semester Examination</option>
-      							<option value="35">April/May 2018 Semester Examination</option>
-      							<option value="41">November/December 2018 Semester Examination</option>
-      							<option value="45">April/May 2019 Semester Examination</option> -->
       							<option value="23" >Nov/Dec 2020 Semester Examination</option>
       						</select>
       					</div>
@@ -43,5 +40,30 @@
               </form>
       			</div>
           </div>
+          <canvas id="myChart" style="width:100%;max-width:100%;"></canvas>
       </body>
+      <script>
+        var xlabels = ["OPERATING SYSTEMS","COMPUTER NETWORKS I","SOFTWARE ENGINEERING","Probability Stattistics and Stochastic Processes","ADVANCE WEB TECHNOLOGIES (ELECTIVE II)","ARTIFICIAL NEURAL NETWORKS (ELECTIVE III)","OPERATING SYSTEMS LAB","SOFTWARE ENGINEERING AND OBJECT ORIENTED ANALYSIS LAB","SCRIPTING LANGUAGE LAB","INDUSTRIAL TRAINING I"];
+        new Chart("myChart", {
+        type: "line",
+        data: {
+          labels: xlabels,
+          datasets: [{ 
+            label: "Your Result",
+            data: [{{yourResult}}],
+            borderColor: "red",
+            fill: false
+          }, { 
+            label: "Friend's Result", 
+            data: [{{friendsResult}}],
+            borderColor: "green",
+            fill: false
+          }]
+        },
+        options: {
+          legend: {display: false}
+        }
+      });
+    </script>
+  </script>
   </html>

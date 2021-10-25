@@ -4,6 +4,9 @@ const path = require('path')
 const data = require('./data/23.json')
 const bodyParser = require('body-parser');
 const fs = require("fs");
+var http = require('http');
+
+const { ChartJS, ChartConfiguration, ChartComponentLike }  = require('chart.js');
 
 app.set('view engine', 'hbs')
 app.use(bodyParser.urlencoded({
@@ -144,7 +147,10 @@ app.post("/analyzeResult",(req,res)=>{
             friendsResult.push(0);
         }
     }
-    return res.status(200).json({yourResult,friendsResult});
+
+    res.render('ResultAnalysis', {
+        yourResult, friendsResult
+    })
 })
 
 app.listen(3000, console.log("Server running on 3000"))
